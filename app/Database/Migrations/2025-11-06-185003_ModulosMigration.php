@@ -17,7 +17,7 @@ class ModulosMigration extends Migration
                 ],
                 "nome"=>[
                     "type"=>"varchar",
-                    "constraint"=>50
+                    "constraint"=>50,    
                 ]
                 
             ]
