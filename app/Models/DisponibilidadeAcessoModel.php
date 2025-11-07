@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class NivelAcessoModel extends Model
+class DisponibilidadeAcessoModel extends Model
 {
-    protected $table            = 'niveis_acessos';
+    protected $table            = 'disponibilidades_acessos';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'App\Entities\NivelAcessoEntity';
+    protected $returnType       = 'App\Entities\DisponibilidadeAcessoEntity';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        "nome",
-        "permite_acesso"
+        "nivel_acesso_id",
+        "recurso_id"
     ];
 
     protected bool $allowEmptyInserts = false;
