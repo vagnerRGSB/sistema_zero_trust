@@ -9,7 +9,7 @@ class TiposLogradourosModel extends Model
     protected $table            = 'tipos_logradouros';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'App\Entities\TipoLogradouro';
+    protected $returnType       = 'App\Entities\TipoLogradouroEntity';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
