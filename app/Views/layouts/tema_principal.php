@@ -7,9 +7,12 @@
 
     <title>Sistema zero trust</title>
 
+    <?= $this->renderSection("style") ?>
     
 </head>
 <body>
-    
+    <?= $this->renderSection("conteudo") ?>
+
+    <?= $this->renderSection("script") ?>
 </body>
 </html>
