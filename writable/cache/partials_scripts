@@ -1,0 +1,5 @@
+a:3:{s:4:"time";i:1762806857;s:3:"ttl";i:60;s:4:"data";s:315:"<!-- DEBUG-VIEW START 2 APPPATH\Views\layouts\partials\scripts.php -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- DEBUG-VIEW ENDED 2 APPPATH\Views\layouts\partials\scripts.php -->
+";}
