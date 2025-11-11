@@ -7,8 +7,21 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class AutenticadorController extends BaseController
 {
-    public function index()
+
+    public function __construct()
     {
-        //
+        
+    }
+    public function SigIni()
+    {
+        
+        return view("autenticacao/sigini");
+    }
+
+    public function acessLogin(){
+
+    }
+    public function logoutLogin(){
+
     }
 }

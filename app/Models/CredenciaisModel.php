@@ -4,18 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UsuarioModel extends Model
+class CredenciaisModel extends Model
 {
-    protected $table            = 'usuarios';
+    protected $table            = 'credenciais';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'App\Entities\UsuarioEntity';
-    protected $useSoftDeletes   = true;
+    protected $returnType       = 'App/Entities/CredenciaisEntity';
+    protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        "nome",
-        "sobre_nome",
-        "nivel_acesso_id"
+        "usuario_id",
+        "email",
+        "senha"
     ];
 
     protected bool $allowEmptyInserts = false;
@@ -25,11 +25,11 @@ class UsuarioModel extends Model
     protected array $castHandlers = [];
 
     // Dates
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
-    protected $createdField  = 'criado_em';
-    protected $updatedField  = 'atualizado_em';
-    protected $deletedField  = 'desabilitado_em';
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
 
     // Validation
     protected $validationRules      = [];
@@ -47,8 +47,4 @@ class UsuarioModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function buscarUsuarioId(int $id){
-        return $this->select("nome,sobre_nome,nivel_acesso_id")->where("id",$id)->first();
-    }
 }
