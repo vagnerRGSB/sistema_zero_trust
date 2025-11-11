@@ -51,4 +51,8 @@ class UsuarioModel extends Model
     public function buscarUsuarioId(int $id){
         return $this->select("nome,sobre_nome,nivel_acesso_id")->where("id",$id)->first();
     }
+
+    public function buscarEmailUsuario(string $email){
+        return $this->where("email",$email)->first();
+    }
 }
