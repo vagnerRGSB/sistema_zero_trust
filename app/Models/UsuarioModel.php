@@ -15,7 +15,13 @@ class UsuarioModel extends Model
     protected $allowedFields    = [
         "nome",
         "sobre_nome",
-        "nivel_acesso_id"
+        "nivel_acesso_id",
+        "bloqueado_ate",
+        "endereco_cep_id",
+        "numero",
+        "tipo_imovel_id",
+        "complemento",
+        "conatens_falhas"
     ];
 
     protected bool $allowEmptyInserts = false;
@@ -47,12 +53,4 @@ class UsuarioModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function buscarUsuarioId(int $id){
-        return $this->select("nome,sobre_nome,nivel_acesso_id")->where("id",$id)->first();
-    }
-
-    public function buscarEmailUsuario(string $email){
-        return $this->where("email",$email)->first();
-    }
 }
