@@ -6,13 +6,19 @@ use CodeIgniter\Model;
 
 class LogRegistroModel extends Model
 {
-    protected $table            = 'logregistros';
+    protected $table            = 'logs_registros';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
+    protected $returnType       = 'App/Entities/LogRegistroEntity';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        "end_ip",
+        "usuario_id",
+        "modulo_id",
+        "metodo_id",
+        "entidade_id"
+    ];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

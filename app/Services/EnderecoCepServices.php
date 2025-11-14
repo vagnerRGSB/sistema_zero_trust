@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Interface\CrudInterface;
 
-class EnderecoService implements CrudInterface{
+class EnderecoCepService implements CrudInterface{
 
 private $endereco_cep;
 
@@ -25,7 +25,7 @@ public function update(int $id, array $data){
 
 }
 public function delete(int $id){
-    
+
 }
 
 
